@@ -15,17 +15,20 @@ namespace HomeWork_19._12._2021.Extensions
             
             string strk = str.ToLower();
             string wordk = word.ToLower();
-
-            if (String.Compare(wordk, strk) == 1)
-            {
-                result = false;
-            }
-            else
+            int m;
+            m = strk.IndexOf(wordk,0, strk.Length - 1);
+            if (m==1)
             {
                 result = true;
             }
+            else
+            {
+                result = false;
+            }
 
             return result;
+
+            
 
         }
     }
